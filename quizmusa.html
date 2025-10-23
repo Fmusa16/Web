@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Halaman</title>
+    
+    <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-sticky {
+    background-color: #e1a21b; 
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header-sticky .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-sticky .logo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.header-sticky nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+
+.hero {
+    background-color: #861b5a; 
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px; 
+}
+
+@media (max-width: 768px) {
+    .three-columns {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+.other-articles {
+    background-color: #f4f4f4; 
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+}
+
+
+footer {
+    background-color: #951c79; 
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 20px; 
+}
+.hero {
+
+    height: 350px; 
+    overflow: hidden;
+    position: relative; 
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.hero-text {
+    
+    position: relative; 
+    z-index: 2; 
+}
+.header-sticky .logo img.header-logo {
+    height: 100px;
+    width: auto;
+    margin-right: 15px;
+}
+    </style>
+</head>
+<body>
+
+    <header class="header-sticky">
+        <div class="container">
+            <div class="logo">Red Bull DOMINATION-2023</div>
+            <nav>
+                <div class="logo">
+                    <img src="logorb.png" alt="Red Bull Racing Logo" class="header-logo">
+                </div>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="RB-19.jpg" alt="Mobil F1 Red Bull RB-19" class="hero-image">
+        <div class="hero-text">
+            <h1>Mobil Red Bull Racing RB-19</h1>
+            <p>Juara Dunia Formula 1</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="three-columns">
+            <article>
+                <h3>Sejarah</h3>
+                <p>Red Bull Racing RB19 adalah mahakarya teknik Formula 1 yang mendefinisikan ulang arti dominasi dalam satu musim. Mobil ini merupakan evolusi dari pendahulunya yang sukses, RB18, dan dirancang oleh tim yang dipimpin oleh sang jenius aerodinamika, Adrian Newey. Sepanjang musim F1 2023, RB19 terbukti hampir tak terkalahkan, menunjukkan kecepatan luar biasa baik dalam kualifikasi maupun saat balapan. Keandalan dan performa konsisten di berbagai jenis sirkuit menjadikannya salah satu mobil F1 paling sukses dalam sejarah olahraga ini.</p>
+            </article>
+            <article>
+                <h3>Inovasi Teknologi</h3>
+                <p>RB19 dilengkapi dengan berbagai inovasi teknologi terkini, termasuk sistem aerodinamika yang ditingkatkan dan mesin yang lebih efisien. Tim Red Bull Racing terus melakukan pengembangan untuk memastikan mobil ini tetap kompetitif di setiap balapan.</p>
+            </article>
+            <article>
+                <h3>Driver</h3>
+                <p>Di balik kemudi RB19, Max Verstappen dan Sergio Pérez membentuk duet yang tangguh. Verstappen, khususnya, menjalani musim bersejarah dengan memecahkan rekor jumlah kemenangan terbanyak dalam satu musim. Dari 22 balapan di musim 2023, RB19 memenangkan 21 di antaranya, sebuah statistik yang menunjukkan tingkat dominasi absolut. Keberhasilan ini tidak hanya mengamankan gelar Juara Dunia Pembalap untuk Verstappen tetapi juga mengunci gelar Juara Dunia Konstruktor untuk Red Bull Racing dengan selisih poin yang sangat besar.</p>
+            </article>
+        </section>
+
+        <section class="other-articles">
+            <h2>Arsitek Kemenangan: Sang Desainer dan Sang Pembalap</h2>
+            <p>
+                Kehebatan RB19 tidak lahir dalam semalam. Mobil ini adalah puncak dari visi teknis Chief Technical Officer, Adrian Newey, yang dianggap sebagai salah satu desainer terhebat dalam sejarah F1. Dipadukan dengan talenta generasi dan konsistensi luar biasa dari Max Verstappen, kombinasi ini menciptakan musim paling dominan yang pernah disaksikan dalam olahraga ini.
+            </p> 
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+</html>
