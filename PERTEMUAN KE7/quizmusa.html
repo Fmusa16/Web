@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Halaman</title>
+    
+    <style>
+    :root{
+        --color-header: #e1a21b;
+        --color-header-text: #333;
+        --color-hero-bg: #861b5a;
+        --color-hero-text: #ffffff;
+        --color-other-bg: #f4f4f4;
+        --color-footer-bg: #951c79;
+        --color-footer-text: #ffffff;
+        --max-width: 1000px;
+        --gap: 30px;
+    }
+
+    [data-theme="dark"]{
+        --color-header: #222;
+        --color-header-text: #f3f3f3;
+        --color-hero-bg: #111;
+        --color-hero-text: #f3f3f3;
+        --color-other-bg: #1b1b1b;
+        --color-footer-bg: #000;
+        --color-footer-text: #fff;
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-header-text);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-sticky {
+    background-color: var(--color-header);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header-sticky .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-sticky .logo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.header-sticky nav a {
+    text-decoration: none;
+    color: var(--color-header-text);
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.theme-toggle-btn{
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0.1);
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: var(--color-hero-bg);
+    color: var(--color-hero-text);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: var(--gap); 
+}
+
+@media (max-width: 768px) {
+    .three-columns {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+.other-articles {
+    background-color: var(--color-other-bg);
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+}
+
+
+footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 20px; 
+}
+.hero {
+
+    height: 350px; 
+    overflow: hidden;
+    position: relative; 
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.hero-text {
+    
+    position: relative; 
+    z-index: 2; 
+}
+.header-sticky .logo img.header-logo {
+    height: 100px;
+    width: auto;
+    margin-right: 15px;
+}
+.card {
+
+    background-color: var(--color-other-bg); 
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content small {
+    color: #777; 
+    display: block;
+    margin-top: 15px;
+}
+
+
+[data-theme="dark"] .card {
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .card-content small {
+    color: #aaa;
+}
+
+
+.theme-toggle-btn {
+    color: var(--color-header-text); 
+}
+.other-articles {
+    background-color: var(--color-other-bg);
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+}
+
+.other-articles {
+    background-color: var(--color-other-bg);
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    /* ----------------------------- */
+}
+
+[data-theme="dark"] .card-content small {
+    color: #aaa;
+}
+
+
+
+[data-theme="dark"] .other-articles {
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.gallery-section {
+    margin-top: var(--gap); /* Memberi jarak dari elemen di atasnya */
+    border: 1px solid rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+    background-color: var(--color-other-bg); 
+}
+
+.gallery-header {
+    background-color: #6c757d; 
+    color: white;
+    padding: 15px 25px;
+}
+
+.gallery-header h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+
+[data-theme="dark"] .gallery-section {
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+[data-theme="dark"] .gallery-header {
+    background-color: #343a40; 
+}
+    </style>
+</head>
+<body>
+
+    <header class="header-sticky">
+        <div class="container">
+            <div class="logo">Red Bull DOMINATION-2023</div>
+           <nav>
+                <div class="logo">
+                    <img src="logorb.png" alt="Red Bull Racing Logo" class="header-logo">
+                </div>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                
+                <button id="theme-toggle-btn" class="theme-toggle-btn" title="Ganti tema" aria-label="Ganti tema" aria-pressed="false">
+                    </button>
+                </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="RB-19.jpg" alt="Mobil F1 Red Bull RB-19" class="hero-image">
+        <div class="hero-text">
+            <h1>Mobil Red Bull Racing RB-19</h1>
+            <p>Juara Dunia Formula 1</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+       <section class="three-columns">
+            
+            <div class="card">
+                <img src="RB-19.jpg" alt="Sejarah RB-19">
+                <div class="card-content">
+                    <h3>Sejarah</h3>
+                    <p>Red Bull Racing RB19 adalah mahakarya teknik Formula 1 yang mendefinisikan ulang arti dominasi dalam satu musim...</p>
+                    <small>Sejarah mobil dominan</small> </div>
+            </div>
+
+            <div class="card">
+                <img src="logorb.png" alt="Logo Red Bull"> <div class="card-content">
+                    <h3>Inovasi Teknologi</h3>
+                    <p>RB19 dilengkapi dengan berbagai inovasi teknologi terkini, termasuk sistem aerodinamika yang ditingkatkan...</p>
+                    <small>Teknologi F1</small>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="RB-19.jpg" alt="Pembalap RB-19"> <div class="card-content">
+                    <h3>Driver</h3>
+                    <p>Di balik kemudi RB19, Max Verstappen dan Sergio Pérez membentuk duet yang tangguh. Verstappen, khususnya...</p>
+                    <small>Verstappen & Pérez</small>
+                </div>
+            </div>
+
+        </section>
+        <section class="other-articles">
+            <h2>Arsitek Kemenangan: Sang Desainer dan Sang Pembalap</h2>
+            <p>
+                Kehebatan RB19 tidak lahir dalam semalam. Mobil ini adalah puncak dari visi teknis Chief Technical Officer, Adrian Newey, yang dianggap sebagai salah satu desainer terhebat dalam sejarah F1. Dipadukan dengan talenta generasi dan konsistensi luar biasa dari Max Verstappen, kombinasi ini menciptakan musim paling dominan yang pernah disaksikan dalam olahraga ini.
+            </p> 
+        </section>
+
+
+        <section class="gallery-section">
+            <div class="gallery-header">
+                <h2>Gallery</h2>
+            </div>
+            <img src="RB-19.jpg" alt="Gallery Image Red Bull" class="gallery-image">
+        </section>
+    </main>
+<footer>
+        <p>&copy; 2025 Red Bull DOMINATION-2023. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+
+</body>
+</html>
