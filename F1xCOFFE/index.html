@@ -21,10 +21,7 @@
           <h1> <a class="navbar-brand" href="index.html">
                   <span class="fa fa-coffee"></span> Formula 1 x Coffee
               </a></h1>
-          <!-- if logo is image enable this   
-  <a class="navbar-brand" href="#index.html">
-      <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-  </a> -->
+
           <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
               data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -794,7 +791,7 @@
     <span class="fa fa-angle-up"></span>
   </button>
   <script>
-    // When the user scrolls down 20px from the top of the document, show the button
+
     window.onscroll = function () {
       scrollFunction()
     };
@@ -807,7 +804,7 @@
       }
     }
 
-    // When the user clicks on the button, scroll to the top of the document
+
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
@@ -821,7 +818,7 @@
 
 <script src="assets/js/theme-change.js"></script>
 
-<!-- js for portfolio lightbox -->
+
 <script src="assets/js/jquery-2.1.4.min.js"></script>
 <script src="assets/js/jquery.chocolat.js "></script>
 <!--light-box-files -->
@@ -830,7 +827,7 @@
     $('.w3_agile_portfolio_grid a').Chocolat();
   });
 </script>
-<!-- /js for portfolio lightbox -->
+<!-- /js portfolio  -->
 
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script>
@@ -869,19 +866,20 @@
   });
 </script>
 
-<!-- script for testimonials -->
+<!-- script  testimonials -->
 <script>
   $(document).ready(function () {
     $('.owl-testimonial').owlCarousel({
       loop: true,
       margin: 0,
       nav: true,
-      dots: false,
+      dots: true,
       responsiveClass: true,
-      autoplay: false,
+      autoplay: true,
       autoplayTimeout: 5000,
       autoplaySpeed: 1000,
-      autoplayHoverPause: false,
+      autoplayHoverPause: true,
+        smartSpeed: 800,
       responsive: {
         0: {
           items: 1,
@@ -903,9 +901,9 @@
     })
   })
 </script>
-<!-- //script for testimonials -->
+<!-- //script  testimonials -->
 
-<!-- script for blog slider -->
+<!-- script  blog slider -->
 <script>
   $(document).ready(function () {
     $('.owl-two').owlCarousel({
@@ -913,10 +911,12 @@
       margin: 30,
       nav: false,
       responsiveClass: true,
-      autoplay: false,
+      autoplay: true,
       autoplayTimeout: 5000,
       autoplaySpeed: 1000,
-      autoplayHoverPause: false,
+      autoplayHoverPause: true,
+      dots: true,
+      smartSpeed: 800,
       responsive: {
         0: {
           items: 1,
@@ -934,11 +934,11 @@
     })
   })
 </script>
-<!-- //script for blog slider -->
+
 
 <script src="assets/js/owl.carousel.js"></script>
 
-<!-- script for banner slider-->
+
 <script>
   $(document).ready(function () {
         $('.owl-one').owlCarousel({
@@ -976,7 +976,7 @@
 <!-- //script -->
 
 
-<!-- disable body scroll which navbar is in active -->
+
 <script>
   $(function () {
     $('.navbar-toggler').click(function () {
@@ -984,7 +984,7 @@
     })
   });
 </script>
-<!-- disable body scroll which navbar is in active -->
+
 
 <!--/MENU-JS-->
 <script>
@@ -998,7 +998,7 @@
     }
   });
 
-  //Main navigation Active Class Add Remove
+
   $(".navbar-toggler").on("click", function () {
     $("header").toggleClass("active");
   });
